@@ -49,13 +49,21 @@ class Train
 		inner(size, nil)
 	end
 
-	def each
+	def map
 		i = @size
 		car = @start
+		result = []
+
 		while i > 0
-			yield car
+			a = yield car
+			result << a
 			car = car.next
 			i -= 1
 		end
+		result
+	end
+
+	def print
+		p self.map {|car| car.light.inspect + '=>'}.join
 	end
 end
