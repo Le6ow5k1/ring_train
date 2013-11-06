@@ -60,6 +60,9 @@ train1 = Train.new(10)
 train2 = Train.new(7)
 train3 = Train.new(1)
 
-p lenght(train1)
-p lenght(train2)
-p lenght(train3)
+p 'train with '+lenght(train1).to_s+" cars"
+train1.print
+p 'train with '+lenght(train2).to_s+" cars"
+train2.print
+p 'train with '+lenght(train3).to_s+" cars"
+train3.print
